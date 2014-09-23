@@ -6,3 +6,11 @@ c:\users\andreas\documents\visual studio 2013\Projects\RoutePlanner\RoutePlanner
 c:\users\andreas\documents\visual studio 2013\Projects\RoutePlanner\RoutePlannerConsole\obj\Debug\RoutePlannerConsole.pdb
 c:\users\andreas\documents\visual studio 2013\Projects\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerLib.dll
 c:\users\andreas\documents\visual studio 2013\Projects\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerLib.pdb
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerConsole.exe.config
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerConsole\obj\Debug\RoutePlannerConsole.exe
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerConsole\obj\Debug\RoutePlannerConsole.pdb
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerConsole.exe
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerConsole.pdb
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerLib.dll
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerLib.pdb
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerConsole\obj\Debug\RoutePlannerConsole.csprojResolveAssemblyReference.cache

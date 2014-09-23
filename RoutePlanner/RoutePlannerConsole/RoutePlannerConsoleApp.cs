@@ -12,8 +12,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerConsole
     {
         static void Main(string[] args)
         {
-            AssemblyName currentAssembly = AssemblyName.GetAssemblyName("RoutePlannerConsole.exe");
-            Console.WriteLine("Welcome to RoutePlanner (Version {0})", currentAssembly.Version);
+            Console.WriteLine("Welcome to RoutePlanner (Version {0})", Assembly.GetExecutingAssembly().GetName().Version);
             Console.ReadKey();
 
             var wayPoint = new WayPoint("Windisch", 47.479319847061966, 8.212966918945312); 
