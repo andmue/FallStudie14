@@ -22,7 +22,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 
         public override string ToString()
         {
-            return "WayPoint: " + (Name ?? "") + " " + Latitude.ToString("F2") + "/" + Longitude.ToString("F2");
+            return "WayPoint: " + (Name ?? string.Empty) + " " + Math.Round(Longitude,2) + " " + Math.Round(Latitude,2);
         }
 
         public double Distance(WayPoint target)
