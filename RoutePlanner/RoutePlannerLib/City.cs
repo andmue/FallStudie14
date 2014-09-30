@@ -21,6 +21,5 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             Population = _population;
             Location = new WayPoint(_name,_latitude, _longitude);
         }
-
     }
 }
