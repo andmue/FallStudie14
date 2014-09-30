@@ -8,7 +8,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
     public class WayPoint
     {
-        private const int Radius = 6371;
+        private const int RADIUS = 6371;
         public string Name { get; set; } 
         public double Longitude { get; set; } 
         public double Latitude { get; set; }
@@ -22,7 +22,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 
         public override string ToString()
         {
-            return "WayPoint: " + (Name ?? string.Empty) + " " + Math.Round(Longitude,2) + " " + Math.Round(Latitude,2);
+            return "WayPoint:" + (Name == null ? "" : " " + Name) + " " + Math.Round(Latitude,2) + "/" + Math.Round(Longitude,2);
         }
 
         /// <summary>
@@ -33,10 +33,13 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         /// <returns>distance</returns>
         public double Distance(WayPoint target)
         {
-            double distance = Radius * Math.Acos(Math.Sin(Latitude)*Math.Sin(target.Latitude) +
-                   Math.Cos(Latitude)*Math.Cos(target.Latitude)*Math.Cos(Longitude - target.Longitude));
+            var radLatitude = Math.PI * Latitude / 180;
+            var radLongitude = Math.PI * Longitude / 180;
+            var tarRadLatitude = Math.PI * target.Latitude / 180;
+            var tarRadLongitude = Math.PI * target.Longitude / 180;
 
-            return distance;
+            return RADIUS * Math.Acos(Math.Sin(radLatitude) * Math.Sin(tarRadLatitude) + 
+                          Math.Cos(radLatitude) * Math.Cos(tarRadLatitude) * Math.Cos(radLongitude - tarRadLongitude));
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
-    class City
+    public class City
     {
-        public string Name {get; set;}
+        public string Name { get; set; }
         public string Country { get; set;}
         public int Population { get; set; }
         public WayPoint Location { get; set; }
@@ -19,8 +19,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             Name = _name;
             Country = _country;
             Population = _population;
-            Location.Longitude = _longitude;
-            Location.Latitude = _latitude;
+            Location = new WayPoint(_name,_latitude, _longitude);
         }
 
     }
