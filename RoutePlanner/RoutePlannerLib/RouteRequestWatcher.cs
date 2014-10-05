@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
-    class RouteRequestWatcher
+    public class RouteRequestWatcher
     {
         public Dictionary <string, int> CityRequests = new Dictionary <string, int>();
 
@@ -23,14 +23,14 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             }
             else
             {
-                CityRequests.Add(args.toCity.Name, 1);
+                CityRequests.Add(args.ToCity.Name, 1);
             }
             Console.WriteLine();
             Console.WriteLine("Current Request State");
             Console.WriteLine("---------------------");
             foreach (string city in CityRequests.Keys)
             {
-                Console.WriteLine("ToCity: {0} has been requested {1} times.");
+                Console.WriteLine("ToCity: {0} has been requested {1} times.", city, CityRequests[city]);
             }
         }
 
@@ -39,7 +39,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         /// </summary>
         /// <param name="city">requested city</param>
         /// <returns>number of requests for selected city</returns>
-        public int GetCityRequest(string city)
+        public int GetCityRequests(string city)
         {
             try
             {
