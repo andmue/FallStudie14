@@ -41,5 +41,30 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             return RADIUS * Math.Acos(Math.Sin(radLatitude) * Math.Sin(tarRadLatitude) + 
                           Math.Cos(radLatitude) * Math.Cos(tarRadLatitude) * Math.Cos(radLongitude - tarRadLongitude));
         }
+
+
+        /// <summary>
+        /// adds two WayPoints
+        /// </summary>
+        /// <param name="first">first WayPoint</param>
+        /// <param name="second">second WayPoint</param>
+        /// <returns>new WayPoint sum with same name as first Waypoint</returns>
+        public static WayPoint operator+ (WayPoint first, WayPoint second)
+        {
+            WayPoint sum = new WayPoint(first.Name, first.Latitude + second.Latitude, first.Longitude + second.Longitude);
+            return sum;
+        }
+
+        /// <summary>
+        /// subtracts two WayPoints
+        /// </summary>
+        /// <param name="first">first WayPoint</param>
+        /// <param name="second">second WayPoint</param>
+        /// <returns>new WayPoint difference with same name as first Waypoint</returns>
+        public static WayPoint operator- (WayPoint first, WayPoint second)
+        {
+            WayPoint difference = new WayPoint(first.Name, first.Latitude - second.Latitude, first.Longitude - second.Longitude);
+            return difference;
+        }
     }
 }
