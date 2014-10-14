@@ -40,7 +40,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
                 IEnumerable<string[]> citiesAsStrings = reader.GetSplittedLines('\t');
                 foreach (var cs in citiesAsStrings)
                 {
-                    _cities.Add(new City(cs[0].Trim(), cs[1].Trim(), int.Parse(cs[2]), double.Parse(cs[3]), double.Parse(cs[4])));
+                    _cities.Add(new City(cs[0].Trim(), cs[1].Trim(), int.Parse(cs[2], CultureInfo.InvariantCulture), double.Parse(cs[3], CultureInfo.InvariantCulture), double.Parse(cs[4], CultureInfo.InvariantCulture)));
                     numberOfCities++;
                 }
             }

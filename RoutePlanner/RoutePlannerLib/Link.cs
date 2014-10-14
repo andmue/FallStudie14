@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
@@ -84,5 +85,14 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             return false;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() == typeof (Link))
+            {
+                var comp = (Link) obj;
+                return fromCity.Equals(comp.FromCity) && toCity.Equals(comp.toCity) && distance.Equals(comp.Distance);
+            }
+            return false;
+        }
     }
 }
