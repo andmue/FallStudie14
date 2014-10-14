@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Utils;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
