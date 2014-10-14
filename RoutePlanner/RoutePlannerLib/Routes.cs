@@ -116,13 +116,10 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             var q = new List<City>(); // the set of all nodes (cities) in Graph ;
             dist = new Dictionary<City, double>();
             previous = new Dictionary<City, City>();
-            City lastCity = null;
             foreach (var v in cities)
             {
                 dist[v] = double.MaxValue;
-                //previous[v] = null;
-                previous[v] = lastCity;
-                lastCity = v;
+                previous[v] = null;
                 q.Add(v);
             }
 
@@ -181,9 +178,10 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         private Link FindLink(City u, City n, TransportModes mode)
         {
             var linkToFind = new Link(u, n, u.Location.Distance(n.Location), mode);
+            var linkToFindRevert = new Link(n, u, n.Location.Distance(u.Location), mode);
             Predicate<Link> predicate = delegate(Link link)
             {
-                return link.Equals(linkToFind);
+                return link.Equals(linkToFind) || link.Equals(linkToFindRevert);
             };
             return routes.Find(predicate);
         }
