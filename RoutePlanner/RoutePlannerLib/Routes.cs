@@ -101,7 +101,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         private List<Link> FindPath(List<City> citiesOnRoute, TransportModes mode)
         {
             var linkedRoute = new List<Link>();
-            for (int i = 0; i <= citiesOnRoute.Count-1; i++)
+            for (int i = 0; i < citiesOnRoute.Count-1; i++)
             {
                 var distance = citiesOnRoute[i].Location.Distance(citiesOnRoute[i + 1].Location);
                 linkedRoute.Add(new Link(citiesOnRoute[i], citiesOnRoute[i+1],distance, mode));
@@ -116,10 +116,13 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             var q = new List<City>(); // the set of all nodes (cities) in Graph ;
             dist = new Dictionary<City, double>();
             previous = new Dictionary<City, City>();
+            City lastCity = null;
             foreach (var v in cities)
             {
                 dist[v] = double.MaxValue;
-                previous[v] = null;
+                //previous[v] = null;
+                previous[v] = lastCity;
+                lastCity = v;
                 q.Add(v);
             }
 

@@ -59,11 +59,18 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerTest
             var cities = new Cities();
             cities.ReadCities(CitiesTestFile);
             var expectedLinks = new List<Link>();
-            expectedLinks.Add(new Link(new City("Zürich", "Switzerland", 7000, 1,2), 
-                                       new City("Aarau", "Switzerland", 7000, 1,2), 0));
-            expectedLinks.Add(new Link(new City("Aarau", "Switzerland", 7000, 1, 2),
+            //expectedLinks.Add(new Link(new City("Zürich", "Switzerland", 7000, 1,2), 
+            //                           new City("Aarau", "Switzerland", 7000, 1,2), 0));
+            //expectedLinks.Add(new Link(new City("Aarau", "Switzerland", 7000, 1, 2),
+            //                           new City("Liestal", "Switzerland", 7000, 1, 2), 0));
+            //expectedLinks.Add(new Link(new City("Liestal", "Switzerland", 7000, 1, 2),
+            //                           new City("Basel", "Switzerland", 7000, 1, 2), 0));
+
+            expectedLinks.Add(new Link(new City("Zürich", "Switzerland", 7000, 1, 2),
                                        new City("Liestal", "Switzerland", 7000, 1, 2), 0));
             expectedLinks.Add(new Link(new City("Liestal", "Switzerland", 7000, 1, 2),
+                                       new City("Aarau", "Switzerland", 7000, 1, 2), 0));
+            expectedLinks.Add(new Link(new City("Aarau", "Switzerland", 7000, 1, 2),
                                        new City("Basel", "Switzerland", 7000, 1, 2), 0));
 
             var routes = new Routes(cities);
