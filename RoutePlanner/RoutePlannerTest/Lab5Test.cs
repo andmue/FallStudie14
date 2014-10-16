@@ -14,7 +14,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerTest
 
         private const string LinksTestFile = "linksTestDataLab4.txt";
 
-        [TestMethod]
+       /* [TestMethod]
         public void TestLoadDynamicValid()
         {
             var cities = new Cities();
@@ -77,7 +77,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerTest
 
             links = routes.FindShortestRouteBetween("doesNotExist", "either", TransportModes.Rail);
             Assert.IsNull(links);
-        }
+        }*/
 
 
 

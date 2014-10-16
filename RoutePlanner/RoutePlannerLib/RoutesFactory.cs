@@ -11,11 +11,13 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         static public IRoutes Create(Cities cities)
         {
             //TODO
+            return null;
         }
         
         static public IRoutes Create(Cities cities, string algorithmClassName)
         {
             //TODO
+            return null;
         }
     }
 }
