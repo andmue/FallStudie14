@@ -66,12 +66,10 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 
         public City[] FindCities(TransportModes transportMode)
         {
-            // Maybe there is a better soloution with .selectMany()  ...
-            var selectedRoutes = routes.Where(r => r.TransportMode == transportMode);
-            return selectedRoutes.Select(c => c.FromCity)
-                                 .Union(selectedRoutes.Select(c => c.ToCity))
-                                 .Distinct()
-                                 .ToArray();
+            return routes.Where(r => r.TransportMode == transportMode)
+                         .SelectMany(c => new[]{ c.FromCity, c.ToCity})
+                         .Distinct()
+                         .ToArray();
         }
 
         #region Lab04: Dijkstra implementation
