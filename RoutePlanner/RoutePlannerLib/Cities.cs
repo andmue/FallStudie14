@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Utils;
+using Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Util;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
@@ -37,27 +37,36 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             var numberOfCities = 0;
             using (TextReader reader = new StreamReader(filename))
             {
-                IEnumerable<string[]> citiesAsStrings = reader.GetSplittedLines('\t');
-                foreach (var cs in citiesAsStrings)
-                {
-                    _cities.Add(new City(cs[0].Trim(), cs[1].Trim(), int.Parse(cs[2], CultureInfo.InvariantCulture), double.Parse(cs[3], CultureInfo.InvariantCulture), double.Parse(cs[4], CultureInfo.InvariantCulture)));
-                    numberOfCities++;
-                }
+                var citiesAsStrings = reader.GetSplittedLines('\t').ToList();
+                // Old Version Lab 4
+                //foreach (var cs in citiesAsStrings)
+                //{
+                //    _cities.Add(new City(cs[0].Trim(), cs[1].Trim(), int.Parse(cs[2], CultureInfo.InvariantCulture), double.Parse(cs[3], CultureInfo.InvariantCulture), double.Parse(cs[4], CultureInfo.InvariantCulture)));
+                //    numberOfCities++;
+                //}
+                citiesAsStrings.ForEach(cs => _cities.Add(new City(cs[0].Trim(),
+                                                                   cs[1].Trim(),
+                                                                   int.Parse(cs[2], CultureInfo.InvariantCulture),
+                                                                   double.Parse(cs[3], CultureInfo.InvariantCulture),
+                                                                   double.Parse(cs[4], CultureInfo.InvariantCulture))));
+
+                return citiesAsStrings.Count();
             }
-            return numberOfCities;
+            //return numberOfCities;        Old Version Lab 4
         }
 
         public List<City> FindNeighbours(WayPoint location, double distance)
         {
-            var neighbours = new List<City>();
+            // Old Version Lab 4
+            //var neighbours = new List<City>();
 
-            foreach (var city in _cities)
-            {
-                if(location.Distance(city.Location) <= distance)
-                    neighbours.Add(city);
-            }
+            //foreach (var city in _cities)
+            //{
+            //    if(location.Distance(city.Location) <= distance)
+            //        neighbours.Add(city);
+            //}
 
-            return neighbours;
+            return _cities.Where(c => location.Distance(c.Location) <= distance).ToList();
         }
 
 
@@ -67,8 +76,16 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             {
                 return city.Name.Trim().ToLower().Equals(cityName.Trim().ToLower());
             };
-            return FindCity(predicate);
+            
+            // Same in Lambda
+            Predicate<City> p = c => c.Name.Trim().ToLower().Equals(cityName.Trim().ToLower());
+            
+            // Lambda inline
+            //return FindCity(c => c.Name.Trim().ToLower().Equals(cityName.Trim().ToLower()));
+
+            return FindCity(p);
         }
+
 
         public City FindCity(Predicate<City> predicate)
         {

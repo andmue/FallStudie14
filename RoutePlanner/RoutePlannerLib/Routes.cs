@@ -64,6 +64,16 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 
         }
 
+        public City[] FindCities(TransportModes transportMode)
+        {
+            // Maybe there is a better soloution with .selectMany()  ...
+            var selectedRoutes = routes.Where(r => r.TransportMode == transportMode);
+            return selectedRoutes.Select(c => c.FromCity)
+                                 .Union(selectedRoutes.Select(c => c.ToCity))
+                                 .Distinct()
+                                 .ToArray();
+        }
+
         #region Lab04: Dijkstra implementation
         public List<Link> FindShortestRouteBetween(string fromCity, string toCity, TransportModes mode)
         {

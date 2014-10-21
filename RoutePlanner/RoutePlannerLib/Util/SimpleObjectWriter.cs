@@ -21,7 +21,6 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Util
             var properties = type.GetProperties();
             foreach (var property in properties)
             {
-                Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
                 if (property.PropertyType.FullName.StartsWith("Fhnw.Ecnf.RoutePlanner."))
                 {
                     stream.WriteLine("{0} is a nested object...", property.Name);
