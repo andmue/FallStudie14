@@ -10,8 +10,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
     {
         static public IRoutes Create(Cities cities)
         {
-            //TODO
-            return null;
+            return Create(cities, Properties.Settings.Default.RouteAlgorithm);
         }
         
         static public IRoutes Create(Cities cities, string algorithmClassName)
