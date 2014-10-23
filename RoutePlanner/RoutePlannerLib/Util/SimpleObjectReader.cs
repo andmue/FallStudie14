@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 
@@ -35,17 +36,15 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Util
                 {
                     var propertyValues = readLine.Split('=');
                     var property = type.GetProperty(propertyValues[0]);
-                    switch (property.PropertyType.Name)
+                    if(property.PropertyType != typeof(String))
                     {
-                        case "String":
-                            property.SetValue(obj, propertyValues[1].Replace("\"", ""));
-                            break;
-                        case "Int32":
-                            property.SetValue(obj, int.Parse(propertyValues[1]));
-                            break;
-                        case "Double":
-                            property.SetValue(obj, double.Parse(propertyValues[1], CultureInfo.InvariantCulture));
-                            break;
+                        var invoker = Activator.CreateInstance(property.PropertyType);
+                        var parser = property.PropertyType.GetMethod("Parse", new[] { typeof(String), typeof(CultureInfo) });
+                        property.SetValue(obj, parser.Invoke(invoker, new object[]{ propertyValues[1], CultureInfo.InvariantCulture }));
+                    }
+                    else
+                    {
+                        property.SetValue(obj, propertyValues[1].Replace("\"", ""));
                     }
                 }
             }
