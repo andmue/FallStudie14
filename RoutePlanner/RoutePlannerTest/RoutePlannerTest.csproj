@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,9 +51,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Lab06Test.cs" />
+    <Compile Include="Lab07Test.cs" />
     <Compile Include="Lab2Test.cs" />
     <Compile Include="Lab3Test.cs" />
     <Compile Include="Lab4Test.cs" />
+    <Compile Include="Lab5SerializerTest.cs" />
+    <Compile Include="Lab5Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -61,7 +66,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="data\citiesTestDataLab3.txt" />
+    <Content Include="data\citiesTestDataLab4.txt" />
     <Content Include="data\linksTestDataLab3.txt" />
+    <Content Include="data\linksTestDataLab4.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RoutePlannerLib\RoutePlannerLib.csproj">
