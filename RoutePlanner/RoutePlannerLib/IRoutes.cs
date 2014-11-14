@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
-    interface IRoutes
+    public interface IRoutes
     {
         /// <summary>
         /// Reads a list of links from the given file.
