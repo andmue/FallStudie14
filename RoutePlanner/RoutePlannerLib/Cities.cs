@@ -6,12 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Util;
+using System.Diagnostics;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
     public class Cities
     {
         private List<City> _cities = new List<City>();
+
+        private static TraceSource logger = new TraceSource("Cities");
 
         public City this[int index]
         {
@@ -34,25 +37,59 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         
         public int ReadCities(string filename)
         {
-            var numberOfCities = 0;
-            using (TextReader reader = new StreamReader(filename))
-            {
-                var citiesAsStrings = reader.GetSplittedLines('\t').ToList();
-                // Old Version Lab 4
-                //foreach (var cs in citiesAsStrings)
-                //{
-                //    _cities.Add(new City(cs[0].Trim(), cs[1].Trim(), int.Parse(cs[2], CultureInfo.InvariantCulture), double.Parse(cs[3], CultureInfo.InvariantCulture), double.Parse(cs[4], CultureInfo.InvariantCulture)));
-                //    numberOfCities++;
-                //}
-                citiesAsStrings.ForEach(cs => _cities.Add(new City(cs[0].Trim(),
-                                                                   cs[1].Trim(),
-                                                                   int.Parse(cs[2], CultureInfo.InvariantCulture),
-                                                                   double.Parse(cs[3], CultureInfo.InvariantCulture),
-                                                                   double.Parse(cs[4], CultureInfo.InvariantCulture))));
+            logger.TraceEvent(TraceEventType.Information, 1, "ReadCities started");
 
-                return citiesAsStrings.Count();
+            var numberOfCities = 0;
+
+            try
+            {
+                using (TextReader reader = new StreamReader(filename))
+                {
+                    var citiesAsStrings = reader.GetSplittedLines('\t').ToList();
+                    // Old Version Lab 4
+                    //foreach (var cs in citiesAsStrings)
+                    //{
+                    //    _cities.Add(new City(cs[0].Trim(), cs[1].Trim(), int.Parse(cs[2], CultureInfo.InvariantCulture), double.Parse(cs[3], CultureInfo.InvariantCulture), double.Parse(cs[4], CultureInfo.InvariantCulture)));
+                    //    numberOfCities++;
+                    //}
+                    //return numberOfCities;
+                    citiesAsStrings.ForEach(cs => _cities.Add(new City(cs[0].Trim(),
+                                                                       cs[1].Trim(),
+                                                                       int.Parse(cs[2], CultureInfo.InvariantCulture),
+                                                                       double.Parse(cs[3], CultureInfo.InvariantCulture),
+                                                                       double.Parse(cs[4], CultureInfo.InvariantCulture))));
+
+                    numberOfCities = citiesAsStrings.Count();
+                }
+                return numberOfCities;
             }
-            //return numberOfCities;        Old Version Lab 4
+            catch (Exception e)
+            {
+                if (isCritical(e))
+                {
+                    throw;
+                }
+                Console.WriteLine("File: \"" + filename + "\" could not be found");
+                Console.WriteLine(e.Message);
+                logger.TraceEvent(TraceEventType.Critical, 1, e.StackTrace);
+                return -1;
+            }
+            finally
+            {
+                logger.TraceEvent(TraceEventType.Information, 1, "ReadCities ended");
+            }
+        }
+
+        private bool isCritical(Exception e)
+        {
+            if (e is FileNotFoundException)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public List<City> FindNeighbours(WayPoint location, double distance)
