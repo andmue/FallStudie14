@@ -74,8 +74,8 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         {
             Predicate<City> predicate = delegate(City city)
             {
-                return city.Name.Trim().ToLower().Equals(cityName.Trim().ToLower());
-            };
+                return city.Name.Trim().ToLower().Equals(cityName.Trim().ToLower(), StringComparison.InvariantCultureIgnoreCase);
+                };
             
             // Same in Lambda
             Predicate<City> p = c => c.Name.Trim().ToLower().Equals(cityName.Trim().ToLower());

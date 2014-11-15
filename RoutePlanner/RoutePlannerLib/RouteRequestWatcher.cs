@@ -41,11 +41,11 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         /// <returns>number of requests for selected city</returns>
         public int GetCityRequests(string city)
         {
-            try
+            if(CityRequests.ContainsKey(city))
             {
                 return CityRequests[city];
             }
-            catch
+            else
             {
                 return 0;
             }
