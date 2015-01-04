@@ -167,5 +167,25 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 	        return weight;
 	    }
 
+        private double[,] InitializeWeightParallel(List<City> cities, List<Link> links)
+        {
+
+            double[,] weight = new double[cities.Count, cities.Count];
+            // initialize with MaxValue:
+            for (int i = 0; i < cities.Count; i++)
+            {
+                for (int j = 0; j < cities.Count; j++)
+                {
+                    weight[i, j] = Double.MaxValue;
+                }
+            }
+
+            Parallel.ForEach(links, e =>
+            {
+                weight[e.FromCity.Index, e.ToCity.Index] = e.Distance;
+                weight[e.ToCity.Index, e.FromCity.Index] = e.Distance;
+            });
+            return weight;
+        }
     }
 }
