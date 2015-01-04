@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Fhnw.Ecnf.RoutePlanner.RoutePlannerLib;
 
-namespace RoutePlannerTest
+namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerTest
 {
     [TestClass]
     [DeploymentItem("data/citiesTestDataLab2.txt")]

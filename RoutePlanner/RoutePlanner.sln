@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutePlannerConsole", "RoutePlannerConsole\RoutePlannerConsole.csproj", "{4A70BA61-939C-4323-BCED-955F356E1536}"
 EndProject
@@ -35,7 +35,6 @@ Global
 		{F91E403C-74A0-4E4E-A636-99E13B03FC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F91E403C-74A0-4E4E-A636-99E13B03FC84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E97984C1-2CBF-475E-A46A-234C68C3E1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E97984C1-2CBF-475E-A46A-234C68C3E1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E97984C1-2CBF-475E-A46A-234C68C3E1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E97984C1-2CBF-475E-A46A-234C68C3E1CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
