@@ -28,6 +28,9 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Util
                 }
                 else
                 {
+                    //ignore Index Property (from City class)
+                    if (property.Name == "Index") continue;
+
                     if (property.GetValue(obj) is double)
                         stream.WriteLine("{0}={1}", property.Name, ((double)property.GetValue(obj)).ToString(CultureInfo.InvariantCulture));
                     else if(property.GetValue(obj) is string)
