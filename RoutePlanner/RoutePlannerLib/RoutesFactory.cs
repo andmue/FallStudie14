@@ -25,9 +25,10 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             {
                 return null;
             }
-
+            
             routeFactory = (IRoutes)Activator.CreateInstance(t, cities);
-            return routeFactory;
+            return routeFactory as IRoutes;
+            
         }
     }
 }

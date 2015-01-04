@@ -39,13 +39,14 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         {
             logger.TraceEvent(TraceEventType.Information, 1, "ReadCities started");
 
+            var numberOfCitiesOld = _cities.Count;
             var numberOfCities = 0;
 
             try
             {
                 using (TextReader reader = new StreamReader(filename))
                 {
-                    var citiesAsStrings = reader.GetSplittedLines('\t').ToList();
+                    var citiesAsStrings = reader.GetSplittedLines('\t');
                     // Old Version Lab 4
                     //foreach (var cs in citiesAsStrings)
                     //{
@@ -53,13 +54,15 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
                     //    numberOfCities++;
                     //}
                     //return numberOfCities;
-                    citiesAsStrings.ForEach(cs => _cities.Add(new City(cs[0].Trim(),
-                                                                       cs[1].Trim(),
-                                                                       int.Parse(cs[2], CultureInfo.InvariantCulture),
-                                                                       double.Parse(cs[3], CultureInfo.InvariantCulture),
-                                                                       double.Parse(cs[4], CultureInfo.InvariantCulture))));
 
-                    numberOfCities = citiesAsStrings.Count();
+                    _cities.AddRange(from cs in citiesAsStrings
+                                     select new City(cs[0].Trim(),
+                                         cs[1].Trim(),
+                                         int.Parse(cs[2], CultureInfo.InvariantCulture),
+                                         double.Parse(cs[3], CultureInfo.InvariantCulture),
+                                         double.Parse(cs[4], CultureInfo.InvariantCulture)));
+
+                    numberOfCities = (citiesAsStrings.Count() - numberOfCitiesOld);
                 }
                 return numberOfCities;
             }
