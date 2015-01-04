@@ -19,12 +19,39 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 
         public City(){ }
 
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="_name"></param>
+        /// <param name="_country"></param>
+        /// <param name="_population"></param>
+        /// <param name="_latitude"></param>
+        /// <param name="_longitude"></param>
         public City(string _name, string _country, int _population, double _latitude, double _longitude)
         {
             Name = _name;
             Country = _country;
             Population = _population;
             Location = new WayPoint(_name,_latitude, _longitude);
+        }
+
+        public override bool Equals(object obj)
+        {
+            City cityObj = obj as City;
+            if (cityObj == null)
+            {
+                return false;
+            }
+            else if(this.Name.Equals(((City)obj).Name) && this.Country.Equals(((City)obj).Country))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
