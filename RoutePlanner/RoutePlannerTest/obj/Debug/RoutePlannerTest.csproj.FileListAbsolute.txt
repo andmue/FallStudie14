@@ -6,3 +6,12 @@ C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin
 C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerLib.dll
 C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerLib.pdb
 C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\obj\Debug\RoutePlannerTest.pdb
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab06Test.cs
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab07Test.cs
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab11Test.cs
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab2Test.cs
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab3Test.cs
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab4Test.cs
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab5SerializerTest.cs
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab5Test.cs
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerTest.dll.config

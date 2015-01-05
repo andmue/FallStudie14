@@ -23,25 +23,26 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         }
 
 
-        public override List<Link> FindShortestRouteBetween(string fromCity, string toCity,
-                                        TransportModes mode)
+        public override event RouteRequestHandler RouteRequestEvent;
+
+        public override List<Link> FindShortestRouteBetween(string fromCity, string toCity, TransportModes mode)
         {
-            List<City> cities = FindCitiesBetween(fromCity, toCity);
-            if (cities == null || cities.Count < 1)
+            List<City> cityList = cities.FindCitiesBetween(cities.FindCity(fromCity), cities.FindCity(toCity));
+            if (cityList == null || cityList.Count < 1)
             {
                 return null;
             }
-            List<Link> links = FindAllLinks(cities, mode);
+            List<Link> links = FindAllLinks(cityList, mode);
             if (links == null || links.Count < 1)
-                return null;
+                return null;    
 			Stopwatch stopWatch = new Stopwatch();
 			stopWatch.Start();
 			long ts0=stopWatch.ElapsedMilliseconds;
 
-            Setup(cities, links);
+            Setup(cityList, links);
 
-            City source = FindCity( fromCity, cities );
-            City target = FindCity(toCity, cities);
+            City source = FindCity( fromCity, cityList );
+            City target = FindCity(toCity, cityList);
             if (D[source.Index, target.Index] == Double.MaxValue)
             {
                 return new List<Link>(); // no path between source and target

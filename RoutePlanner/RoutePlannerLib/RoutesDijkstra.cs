@@ -6,22 +6,38 @@ using System.Threading.Tasks;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 {
-    class RoutesDijkstra : Routes
+    public class RoutesDijkstra : Routes
     {
-        public delegate void RouteRequestHandler(object sender, RouteRequestEventArgs e);
-        public event RouteRequestHandler RouteRequestEvent;
+        public override event RouteRequestHandler RouteRequestEvent;
 
         //Konstruktor
-        public RoutesDijkstra(Cities cities)
-            : base(cities)
+        public RoutesDijkstra(Cities cities): base(cities)
         {
         }
 
+        public Task<List<Link>> GoFindShortestRouteBetween(string fromCity, string toCity, TransportModes mode)
+        {
+            return Task.Run(() => FindShortestRouteBetween(fromCity, toCity, mode));
+        }
+
+        public Task<List<Link>> GoFindShortestRouteBetween(string fromCity, string toCity, TransportModes mode, IProgress<string> reportProgress)
+        {
+            return Task.Run(() => FindShortestRouteBetween(fromCity, toCity, mode, reportProgress));
+        }
+
         #region Lab04: Dijkstra implementation
-        public List<Link> FindShortestRouteBetween(string fromCity, string toCity, TransportModes mode)
+
+        public override List<Link> FindShortestRouteBetween(string fromCity, string toCity, TransportModes mode)
+        {
+            return FindShortestRouteBetween(fromCity, toCity, mode, null);
+        }
+
+        public List<Link> FindShortestRouteBetween(string fromCity, string toCity, TransportModes mode,  IProgress<string> reportProgress)
         {
             var from = cities.FindCity(fromCity);
             var to = cities.FindCity(toCity);
+            if(reportProgress != null)
+                reportProgress.Report("Find cities by name - done");
 
             if (RouteRequestEvent != null)
             {
@@ -30,6 +46,8 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
             }
 
             var citiesBetween = cities.FindCitiesBetween(from, to);
+            if (reportProgress != null)
+                reportProgress.Report("Find cities between"+ from.Name + " and " + to.Name + " - done");
             if (citiesBetween == null || citiesBetween.Count < 1 || routes == null || routes.Count < 1)
                 return null;
 
@@ -43,12 +61,20 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
 
             // the actual algorithm
             previous = SearchShortestPath(mode, q, dist, previous);
+            if (reportProgress != null)
+                reportProgress.Report("Route calculation - done");
 
             // create a list with all cities on the route
             var citiesOnRoute = GetCitiesOnRoute(source, target, previous);
+            if (reportProgress != null)
+                reportProgress.Report("Gather all cities on route - done");
 
             // prepare final list if links
-            return FindPath(citiesOnRoute, mode);
+            var path = FindPath(citiesOnRoute, mode);
+            if (reportProgress != null)
+                reportProgress.Report("Find path - done");
+
+            return path;
         }
 
         private List<Link> FindPath(List<City> citiesOnRoute, TransportModes mode)

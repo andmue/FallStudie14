@@ -48,12 +48,12 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
                 {
                     var citiesAsStrings = reader.GetSplittedLines('\t');
                     // Old Version Lab 4
-                    //foreach (var cs in citiesAsStrings)
-                    //{
-                    //    _cities.Add(new City(cs[0].Trim(), cs[1].Trim(), int.Parse(cs[2], CultureInfo.InvariantCulture), double.Parse(cs[3], CultureInfo.InvariantCulture), double.Parse(cs[4], CultureInfo.InvariantCulture)));
-                    //    numberOfCities++;
-                    //}
-                    //return numberOfCities;
+                    foreach (var cs in citiesAsStrings)
+                    {
+                        _cities.Add(new City(cs[0].Trim(), cs[1].Trim(), int.Parse(cs[2], CultureInfo.InvariantCulture), double.Parse(cs[3], CultureInfo.InvariantCulture), double.Parse(cs[4], CultureInfo.InvariantCulture)));
+                        numberOfCities++;
+                    }
+                    return numberOfCities;
 
                     _cities.AddRange(from cs in citiesAsStrings
                                      select new City(cs[0].Trim(),

@@ -67,11 +67,11 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
         /// </summary>
         /// <param name="cities">list of city objects</param>
         /// <returns>true if both link-cities are in the list</returns>
-        internal bool IsIncludedIn(List<City> cities)
+        /*internal bool IsIncludedIn(List<City> cities)
         {
-            var included = cities.Where(c => c.Name == FromCity.Name || c.Name == ToCity.Name).Any();
+            var included = cities.Any(c => c.Name == FromCity.Name || c.Name == ToCity.Name);
             return included;
-        }
+        }*/
 
         public override bool Equals(object obj)
         {

@@ -57,6 +57,7 @@
     <Compile Include="Lab07Test.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Lab10Test.cs" />
     <Compile Include="Lab11Test.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

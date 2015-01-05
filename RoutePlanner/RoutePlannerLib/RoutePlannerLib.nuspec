@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Fhnw.Ecnf.RoutePlanner</id>
+    <version>1.0.0</version>
+    <authors>AndreasMueller/SarahGeissberger</authors>
+    <owners>AndreasMueller/SarahGeissberger</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# case study RoutePlanner</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>C# RoutePlanner</tags>
+  </metadata>
+</package>
