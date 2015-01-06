@@ -7,7 +7,7 @@ using Microsoft.Office.Interop.Excel;
 
 namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Export
 {
-    class ExcelExchange
+    public class ExcelExchange
     {
         Application _excelApp;
         
@@ -44,6 +44,7 @@ namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Export
 
             workbook.SaveAs(fileName, XlFileFormat.xlOpenXMLWorkbook);
             workbook.Close();
+            return ;
         }
 
         

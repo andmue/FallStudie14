@@ -10,7 +10,6 @@ C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerLib\bin\
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.csprojResolveAssemblyReference.cache
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.dll
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.pdb
-C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.csprojResolveAssemblyReference.cache
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerLib\bin\Debug\RoutePlannerLib.dll.config
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerLib\bin\Debug\RoutePlannerLib.dll
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerLib\bin\Debug\RoutePlannerLib.pdb
