@@ -15,3 +15,27 @@ C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin
 C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab5SerializerTest.cs
 C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab5Test.cs
 C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerTest.dll.config
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab2.txt
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab06Test.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab07Test.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab10Test.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab11Test.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab2Test.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab3Test.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab4Test.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab5SerializerTest.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab5Test.cs
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerTest.dll.config
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerTest.dll
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerTest.pdb
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerLib.dll
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerLib.pdb
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\obj\Debug\RoutePlannerTest.csprojResolveAssemblyReference.cache
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\obj\Debug\RoutePlannerTest.dll
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\obj\Debug\RoutePlannerTest.pdb
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab11.txt
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab3.txt
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab4.txt
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab11.txt
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab3.txt
+C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab4.txt

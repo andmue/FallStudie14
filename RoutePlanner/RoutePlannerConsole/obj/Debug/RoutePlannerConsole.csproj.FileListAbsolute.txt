@@ -20,5 +20,4 @@ C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\R
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerConsole.exe
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerConsole.pdb
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerLib.dll
-C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerConsole\bin\Debug\RoutePlannerLib.pdb
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerConsole\obj\Debug\RoutePlannerConsole.csprojResolveAssemblyReference.cache

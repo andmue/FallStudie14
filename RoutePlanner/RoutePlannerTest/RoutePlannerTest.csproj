@@ -57,7 +57,9 @@
     <Compile Include="Lab07Test.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Lab10Test.cs" />
+    <Compile Include="Lab10Test.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Lab11Test.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
@@ -91,15 +93,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\citiesTestDataLab11.txt" />
+    <Content Include="data\citiesTestDataLab11.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\citiesTestDataLab2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="data\citiesTestDataLab3.txt" />
-    <Content Include="data\citiesTestDataLab4.txt" />
-    <Content Include="data\linksTestDataLab11.txt" />
-    <Content Include="data\linksTestDataLab3.txt" />
-    <Content Include="data\linksTestDataLab4.txt" />
+    <Content Include="data\citiesTestDataLab3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\citiesTestDataLab4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\linksTestDataLab11.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\linksTestDataLab3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\linksTestDataLab4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RoutePlannerLib\RoutePlannerLib.csproj">
