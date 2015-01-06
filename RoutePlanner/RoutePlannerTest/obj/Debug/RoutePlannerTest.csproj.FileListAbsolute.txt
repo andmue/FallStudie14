@@ -39,3 +39,10 @@ C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\R
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab11.txt
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab3.txt
 C:\Users\Sarah\Documents\Visual Studio 2013\Projects\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab4.txt
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab11.txt
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab3.txt
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab4.txt
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab11.txt
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab3.txt
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab4.txt
+C:\Users\Andreas\Documents\GitHub\FallStudie14\RoutePlanner\RoutePlannerTest\bin\Debug\Lab10Test.cs
